@@ -18,11 +18,11 @@ const server = http.createServer((req, res) => {
         res.end('num1 must be a positive integer');
       } else if (!Number.isInteger(value2) || value2 < 0) {
         res.statusCode = 404;
-        res.end('num2 should be a non-negative integer');
+        res.end('num2 must be a non-negative integer');
       } else {
         // Calculate exponential power and send response
         const result = Math.pow(value1, value2);
-        res.statusCode = 200;
+        res.statusCode =  200;
         res.setHeader('Content-Type', 'text/plain');
         res.end(`OK ${result}`);
       }
