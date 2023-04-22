@@ -23,8 +23,9 @@ const server = http.createServer((req, res) => {
         // Calculate exponential power and send response
         const result = Math.pow(value1, value2);
         res.statusCode =  200;
+        res.statusMessage = "OK";
         res.setHeader('Content-Type', 'text/plain');
-        res.end(`OK ${result}`);
+        res.end(`The result is ${result}`);
       }
       
     });
